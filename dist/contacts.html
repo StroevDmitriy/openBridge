@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu:300,400,500&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
+    <title>Contacts</title>
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="contacts-page">
+<header class="header">
+  <div class="logo animate__animated animate__fadeInDown"><a href="#"><img src="./img/logo.svg" alt=""></a></div>
+  <div class="burger-button animate__animated animate__fadeInDown">
+    <div class="burger-container"><span></span></div>
+  </div>
+  <div class="menu" id="main-menu">
+    <div class="menu-list">
+      <div class="menu-item"><a href="#">
+          <div class="link-content"><span>Ссылка 1</span>
+            <p>We are<br>what we do<br>people</p>
+          </div></a></div>
+      <div class="menu-item"><a href="#">
+          <div class="link-content"><span>Ссылка 2</span>
+            <p>We are what we do people</p>
+          </div></a></div>
+      <div class="menu-item"><a href="#">
+          <div class="link-content"><span>Ссылка 3</span>
+            <p>We are what we do people</p>
+          </div></a></div>
+    </div>
+  </div>
+</header>
+    <main>
+      <section class="main-section header-indent">
+        <div class="content">
+          <div class="title-row">
+            <div class="reverse-title-container">
+              <div class="reverse-title">
+                <h1>Contact</h1>
+              </div>
+            </div>
+            <div class="subtitle">Enough about us, let's talk about you. Get in touch.</div>
+          </div>
+          <div class="contacts-row">
+            <div class="contacts-block">
+              <div class="branches-block">
+                <div class="branch branch_london">
+                  <div class="branch__title">London</div>
+                  <div class="branch__adress">Невский проспект, 1</div>
+                  <div class="branch__tel"><a href="tel:+446982635848">+44 698 263 58 48</a></div>
+                </div>
+                <div class="branch branch_st-petersburg">
+                  <div class="branch__title">St. Petersburg</div>
+                  <div class="branch__adress">Невский проспект, 1</div>
+                  <div class="branch__tel"><a href="tel:+446982635848">+7 369 263 58 48</a></div>
+                </div>
+              </div>
+              <div class="soc-block">
+                <div class="soc-item"><a href="#"><img src="img/ico-facebook.svg" alt=""></a></div>
+                <div class="soc-item"><a href="#"><img src="img/ico-instagram.svg" alt=""></a></div>
+              </div>
+              <div class="emails-block">
+                <div class="email-item"><span>Email: </span><a href="mailto:hello@openbridge.media"> hello@openbridge.media</a></div>
+                <div class="email-item"><span>Job: </span><a href="mailto:jobs@openbridge.media"> jobs@openbridge.media</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback-section" id="feedback-section">
+        <div class="show-form-btn-container"><a class="show-form-btn" id="show-form-btn" href="#feedback-section">Talk to Open bridge about your project</a></div>
+        <form id="feedback-form">
+          <div class="user-info">
+            <input name="name" type="text" placeholder="What is your name?">
+            <input name="email" type="email" placeholder="Your email">
+            <input name="tel" type="tel" placeholder="Your phone number">
+          </div>
+          <textarea name="" cols="30" rows="10" placeholder="Tell us about your project"></textarea>
+          <div class="additional-info">
+            <div class="project-info-item project-timeline-block">
+              <div class="title">Project timeline</div>
+              <input class="proj-timeline" type="text">
+            </div>
+            <div class="project-info-item project-budget-block">
+              <div class="title">Budget</div>
+              <input class="budget-range" type="text">
+            </div>
+          </div>
+          <div class="policy-privacy">
+            <label for="privacy-policy-cb">
+              <input id="privacy-policy-cb" type="checkbox"><span></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error eaque inventore enim maxime aspernatur aut velit voluptatum similique porro.       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error eaque inventore enim maxime aspernatur aut velit voluptatum similique porro.       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error eaque inventore enim maxime aspernatur aut velit voluptatum similique porro.
+            </label>
+          </div>
+          <button class="submit-btn" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+  <script type="text/javascript" src="./js/bundle.js"></script></body>
+</html>

@@ -1,0 +1,149 @@
+.work-page
+  .header
+    background-color: #000
+  .project-section
+    display: flex
+
+    padding-top: 216px
+    flex-flow: column
+    align-items: center
+    .project-item
+      position: relative
+      display: flex
+      // height: 680px
+      // max-height: 680px
+      height: 600px
+      max-height: 600px
+      width: 100%
+
+      padding: 40px 100px
+      align-items: center
+
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+
+      --box-shadow-color: rgba(238, 207, 186, 0)
+      box-shadow: inset 0px -250px 130px -100px var(--box-shadow-color)
+
+      transition: all .3s
+
+      .project-content
+        position: relative
+        
+        z-index: 1
+
+      h2
+        color: #fff
+        font-size: 52px
+        line-height: 1.4
+        span
+          display: block
+
+      .btns-row
+        display: inline-flex
+        margin-top: 0px
+
+        align-items: center
+        justify-content: flex-start
+        padding: 0px
+
+        border-width: 0px
+
+        font-size: 24px
+
+        overflow: hidden
+
+        max-height: 0px
+        // max-height: 120px
+        transition: all .3s
+
+      .btn-item
+        &:not(:last-child)
+          margin-right: 40px          
+      
+      .branding-btn
+        color: #fff
+        @media (hover)
+          &:hover
+            color: #ffe3b7
+
+      .project-details-btn
+        position: relative
+        padding: 20px 70px 20px 50px
+
+        color: #ffe3b7
+        // font-size: 24px
+        letter-spacing: 2px
+        text-transform: uppercase
+
+        background-color: #2e3142
+
+        border-radius: 40px
+
+        cursor: pointer
+        transition: all .3s
+        border: 2px solid transparent
+        &::after
+          position: absolute
+          content: '+'
+          right: 40px
+
+          transition: all .3s
+        @media (hover)
+          &:hover
+            border-color: #fff
+          // &:hover
+          //   padding: 20px 75px 20px 45px
+          //   &::after
+          //     right: 35px
+      
+      @media (hover)
+        &:hover
+          --box-shadow-color: rgba(238, 207, 186, .7)
+          .btns-row
+            max-height: 120px
+            margin-top: 40px
+
+            padding-top: 50px
+            padding-right: 20%
+
+            border-top: 2px solid #fff
+    
+    .show-more-btn
+      position: relative
+      display: inline-block
+      margin: 40px auto
+
+      // padding: 20px 70px 20px 50px
+      padding: 20px 60px 20px 60px
+
+      // color: #ffe3b7
+      color: #2e3142
+      font-size: 24px
+      letter-spacing: 2px
+      text-transform: uppercase
+      
+      // background-color: #2e3142
+      background-color: #ffe3b7
+
+      border: 2px solid transparent
+      border-radius: 40px
+
+      cursor: pointer
+      transition: all .3s
+      // &::after
+      //   position: absolute
+      //   content: '+'
+      //   right: 40px
+
+      //   transition: all .3s
+      @media (hover)
+        &:hover
+          border-color: #2e3142
+          // padding: 20px 75px 20px 45px
+          // &::after
+            // right: 35px
+
+
+

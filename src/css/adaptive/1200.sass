@@ -1,0 +1,80 @@
+
+@media screen and ( max-width: 1399px )
+  .about-page
+    .about-section
+      .section-content
+        .desc-block
+          padding: 160px 80px 50px 120px
+    .crew-section
+      .people-arrow
+        // right: -20px
+        bottom: unset
+        top: -80px
+        right: 100px
+
+  .contacts-page
+    .main-section
+      padding: 216px 50px 80px
+      .content
+        width: 100%
+
+@media screen and ( max-width: 1199px )
+  .about-page
+
+    .about-section
+      .section-content
+        .img-block
+          min-width: unset
+          width: 35%
+          .img-container
+            margin-left: calc(15% + 80px)
+            margin-top: 40%
+
+        .desc-block
+          width: 65%
+
+          padding: 100px 80px 50px 140px
+        // flex-flow: column
+    
+    .activities-section
+      .reverse-title-container
+        .reverse-title
+          right: 20px
+      .activities-list
+        justify-content: space-evenly
+    
+    .crew-section
+      .reverse-title-container
+        margin-top: -30px
+      .people-list
+        .person-card
+          .img-container
+            // width: 240px
+            // height: 320px
+            height: 400px
+            width: 300px
+
+  .contacts-page
+    .reverse-title
+      left: 0%
+    h1
+      width: 25%
+
+      // font-size: 32px
+    .main-section
+      .contacts-row
+        .title
+          width: 25%
+
+          font-size: 28px
+      .title-row
+        .subtitle
+          width: 75%
+      .contacts-block
+        width: 75%
+      .branches-block
+        .branch:not(:last-child)
+          margin-right: 40px
+        .branch__emails
+          a
+            letter-spacing: 1px

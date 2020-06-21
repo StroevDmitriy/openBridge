@@ -1,0 +1,410 @@
+.about-page
+  overflow-x: hidden
+  .header
+    // .logo
+    //   animation-delay: 1s
+    .burger-button
+      // animation-delay: 1s
+      .burger-container
+        span,
+        &::after,
+        &::before
+          background-color: #000
+      &.active
+        .burger-container
+          span,
+          &::after,
+          &::before
+            background-color: #cecece
+
+  .reverse-title-container
+    .reverse-title
+      font-size: 28px
+      letter-spacing: 2px
+      text-transform: uppercase
+
+  h2
+    color: #000
+    font-size: 56px
+    letter-spacing: 6px
+    text-transform: uppercase
+
+  main
+    p
+      font-size: 18px
+      letter-spacing: 2px
+      line-height: 2
+
+  .about-section
+    margin-bottom: 180px
+    .section-content
+      display: flex
+      min-height: 800px
+      .img-block
+        position: relative
+        min-width: 50%
+
+        background-color: #27282c
+        .reverse-title-container
+          position: absolute
+          height: 100%
+          width: 100%
+
+          overflow: hidden
+        .reverse-title
+          position: absolute
+          margin-left: 80px
+          left: 4px
+          bottom: 30%
+
+          color: #fff
+
+          transform: rotate(-90deg)
+          transform-origin: 0px 0px 0px
+          &::after
+            position: absolute
+            content: ''
+            left: calc(-500% - 20px)
+            top: 50%
+
+            height: 2px
+            width: 500%
+
+            background-color: #fff
+        .img-container
+          position: relative
+          display: flex
+          height: 70%
+          width: 85%
+          margin-left: calc(15% + 60px)
+          margin-top: 20%
+          img
+            opacity: 0 
+            transition: all .3s ease-in-out 1.5s
+
+            width: 100%
+            height: 100%
+            object-fit: contain
+            object-position: center
+
+          &::after
+            position: absolute
+            content: ''
+            width: 0%
+            height: 100%
+            left: -15%
+
+            background-color: #ffe2b6
+          &.striped
+            // animation: imgShow .3s ease-in 1.5s forwards
+            img
+              opacity: 1
+            &::after
+              animation: imgAfterShow .7s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1s, imgAfterHide .7s cubic-bezier(0.835, 0.160, 0.510, 0.700) 1.7s forwards
+
+          @keyframes imgAfterShow
+            from
+              width: 0%
+            to
+              width: 115%
+
+          @keyframes imgAfterHide
+            from
+              width: 115%
+              left: -15%
+            to
+              width: 0%
+              left: 100%
+
+      .desc-block
+        display: flex
+        width: 50%
+
+        // padding: 50px 140px
+        padding: 160px 140px 50px
+        align-items: center
+        justify-content: center
+        h2
+          position: relative
+          display: inline-block
+          margin-bottom: 50px
+
+          color: transparent
+
+          
+          &::after
+            position: absolute
+            content: ''
+            width: 0%
+            height: 120%
+            left: -30%
+
+            background-color: red
+
+            // animation: name duration timing-function delay iteration-count direction fill-mode
+          &.striped
+            animation: elShow .3s ease-in 1.2s forwards
+            &::after
+              animation: elAfterShow .7s cubic-bezier(0.165, 0.840, 0.440, 1.000) .5s, elAfterHide .7s cubic-bezier(0.835, 0.160, 0.510, 0.700) 1.2s forwards
+              
+          @keyframes elAfterShow
+            from
+              width: 0%
+            to
+              width: 170%
+
+          @keyframes elAfterHide
+            from
+              width: 170%
+              left: -30%
+            to
+              width: 0%
+              left: 140%
+
+          @keyframes elShow
+            from
+              color: transparent
+            to
+              color: #000
+
+            
+        p
+          &:not(:last-child)
+            margin-bottom: 50px
+
+  .activities-section
+    position: relative
+    margin-bottom: 180px
+    .container
+      position: relative
+
+      padding: 0px 80px
+
+      z-index: 50
+    
+    .reverse-title-container
+      position: absolute
+      width: 100%
+      height: 100%
+
+      overflow: hidden
+
+      z-index: 20
+      .reverse-title
+        display: inline-block
+        position: absolute
+        right: 40px
+
+        transform: rotate(-90deg)
+        transform-origin: calc(100% - 28px) 28px
+
+        &::after
+          position: absolute
+          content: ''
+          left: calc(-500% - 20px)
+          top: 50%
+
+          height: 2px
+          width: 500%
+
+          background-color: #000
+    h2
+      position: relative
+      margin-bottom: 60px
+
+      text-align: center
+      color: transparent
+      &::after
+        position: absolute
+        content: ''
+        width: 0%
+        height: 120%
+        left: -30%
+
+        background-color: red
+      &.striped
+        animation: elShow .3s ease-in 1.2s forwards
+        &::after
+          animation: elAfterShow .7s cubic-bezier(0.165, 0.840, 0.440, 1.000) .5s, elAfterHide .7s cubic-bezier(0.835, 0.160, 0.510, 0.700) 1.2s forwards
+          
+      // @keyframes elAfterShow
+      //   from
+      //     width: 0%
+      //   to
+      //     width: 170%
+
+      // @keyframes elAfterHide
+      //   from
+      //     width: 170%
+      //     left: -30%
+      //   to
+      //     width: 0%
+      //     left: 140%
+
+      // @keyframes elShow
+      //   from
+      //     color: transparent
+      //   to
+      //     color: #000
+        
+        
+    p
+      margin-bottom: 80px
+
+      font-size: 18px
+      text-align: center
+
+    .activities-list
+      display: flex
+      justify-content: space-between
+
+      .activity-item
+        display: block
+        width: auto
+
+        break-inside: avoid
+
+        margin: 0px 80px 30px
+      .title
+        position: relative
+        display: inline-block
+
+        color: #000
+        font-size: 28px
+
+        cursor: pointer
+        user-select: none
+        transition: all .3s
+        &::after
+          position: absolute
+          content: '+'
+          right: -30px
+
+          transition: all .3s
+
+        &.active
+          &::after
+            content: '-'
+            // opacity: 0
+        @media (hover)
+          &:hover
+            color: #ed0000
+            &::after
+              color: #ed0000
+
+              transform: translateX(10px)
+
+
+    .activity-sublist
+      display: none
+      margin-top: 30px
+      .activity-subitem
+        &:not(:last-child)
+          margin-bottom: 20px
+
+  .crew-section
+    position: relative
+    padding: 80px 0px
+    background-color: #27282c
+    h2
+      margin-bottom: 80px
+
+      color: #fff
+      font-size: 42px
+      letter-spacing: 2px
+    // .container
+    //   position: relative
+    .people-list-container
+      position: relative
+    .people-arrow
+      position: absolute
+      width: 66px
+      height: 2px
+      // top: calc(50% - 35px)
+      bottom: -20px
+      right: -30px
+
+      background-color: #888
+      &::after,
+      &::before
+        position: absolute
+        content: ''
+        width: 30px
+        height: 2px
+        right: -14px
+
+        background-color: #888
+      &::after
+        top: -9px
+        transform: rotate(38deg)
+      
+      &::before
+        bottom: -9px
+        transform: rotate(-38deg)
+    .people-list
+      display: flex
+
+      padding-bottom: 17px
+
+      overflow-x: scroll
+      overflow: -moz-scrollbars-none
+      scrollbar-width: none
+
+      transition: all .5s ease-in-out
+      &::-webkit-scrollbar
+        display: none
+      .person-card
+        // min-width: 318px
+        margin-right: 70px
+        .img-container
+          width: 100%
+          width: 320px
+          height: 400px
+          img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            object-position: center
+        .person-info
+          margin-left: 80px
+
+          padding-top: 20px
+          padding-left: 10px
+
+          border-left: 1px solid #fff
+
+          color: #fff
+          font-size: 20px
+          letter-spacing: 1px
+          .name
+            margin-bottom: 10px
+          .position
+            color: #aaa
+    
+    .reverse-title-container
+      position: absolute
+      width: 100%
+      height: calc(100% - 80px)
+
+      color: #fff
+
+      overflow: hidden
+      .reverse-title
+        display: inline-block
+        position: absolute
+        right: 40px
+
+        transform: rotate(-90deg)
+        transform-origin: calc(100% - 28px) 28px
+
+        &::after
+          position: absolute
+          content: ''
+          left: calc(-500% - 20px)
+          top: 50%
+
+          height: 2px
+          width: 500%
+
+          background-color: #fff
+

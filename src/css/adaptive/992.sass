@@ -1,0 +1,125 @@
+@media screen and ( max-width: 991px )
+  .header
+    .burger-button
+      &.active
+        .burger-container
+          span,
+          &::after,
+          &::before
+            background-color: #000
+
+    .menu
+      .menu-list
+        .menu-item
+          height: 0%
+          width: 100%
+          a
+            font-size: 32px
+          .link-content
+            &.show
+              top: 0%
+              opacity: 1
+            &.hide
+              top: 100%
+              opacity: 0
+            p
+              display: none
+            span
+              padding-bottom: 0px
+          &:nth-child(1)
+            top: 0%
+            left: 0%
+          &:nth-child(2)
+            top: 33.333%
+            left: 0%
+          &:nth-child(3)
+            top: 66.666%
+            left: 0%
+            
+
+  .about-page
+    h2
+      font-size: 42px
+
+    .activities-section
+      h2
+        text-align: left
+      p
+        text-align: left
+      .activities-list
+        flex-flow: column
+        
+        text-align: left
+        .activity-item
+          margin-left: 0px
+
+          text-align: left
+
+    .about-section
+      .section-content
+        .desc-block
+          padding: 100px 80px 50px 110px
+          
+
+    .crew-section
+      .people-list
+        .person-card
+          .img-container
+            height: 360px
+            width: 270px
+
+
+  .work-page
+    .project-section
+      .project-item
+        height: 480px
+        max-height: unset
+        h2
+          font-size: 42px
+        .btns-row
+          max-height: 120px
+          margin-top: 20px
+
+          // margin-left: 200px
+
+          padding-top: 30px
+          padding-right: 20%
+
+          border-top: 2px solid #fff
+
+  .contacts-page
+    .main-section
+      height: auto
+
+      padding-top: 220px!important
+      .contacts-block
+        display: flex
+
+        flex-flow: column
+      
+      .contacts-row
+        .title
+          margin-right: 40px
+
+      .branches-block
+        flex-flow: column
+        .branch:not(:last-child)
+          margin-right: 0px
+          margin-bottom: 40px
+
+      .soc-block
+        align-self: flex-start
+
+    .feedback-section
+      .show-form-btn
+        text-align: center
+        line-height: 1.4
+      #feedback-form
+        .user-info
+          flex-flow: column
+          input
+            width: 100%
+            &:not(:last-child)
+              margin-bottom: 20px
+              margin-right: 0px
+

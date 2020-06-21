@@ -1,0 +1,80 @@
+html(lang="en")
+  include ../includes/head.pug
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css")
+    title Contacts
+  body.contacts-page
+
+    include ../includes/header.pug
+
+    main
+      section.main-section.header-indent
+        .content
+          .title-row
+            .reverse-title-container
+              .reverse-title
+                h1 Contact
+            //- h1 Contact
+            .subtitle Enough about us, let's talk about you. Get in touch.
+          .contacts-row
+            //- .title Talk to us:
+            .contacts-block
+              .branches-block
+                .branch.branch_london
+                  .branch__title London
+                  //- .branch__emails
+                  //-   a(href="mailto:hello@openbridge.media") hello@openbridge.media
+                  //-   a(href="mailto:jobs@openbridge.media") jobs@openbridge.media
+                  .branch__adress Невский проспект, 1
+                  .branch__tel
+                    a(href="tel:+446982635848") +44 698 263 58 48
+                .branch.branch_st-petersburg
+                  .branch__title St. Petersburg
+                  //- .branch__emails
+                  //-   a(href="mailto:hello@openbridge.media") hello@openbridge.media
+                  //-   a(href="mailto:jobs@openbridge.media") jobs@openbridge.media
+                  .branch__adress Невский проспект, 1
+                  .branch__tel
+                    a(href="tel:+446982635848") +7 369 263 58 48
+              .soc-block
+                .soc-item
+                  a(href="#")
+                    img(src="img/ico-facebook.svg", alt="")
+                .soc-item
+                  a(href="#")
+                    img(src="img/ico-instagram.svg", alt="")
+              .emails-block
+                .email-item
+                  span Email: 
+                  a(href="mailto:hello@openbridge.media")  hello@openbridge.media
+                .email-item
+                  span Job: 
+                  a(href="mailto:jobs@openbridge.media")  jobs@openbridge.media
+
+      section.feedback-section#feedback-section
+        .show-form-btn-container
+          a#show-form-btn.show-form-btn(href="#feedback-section") Talk to Open bridge about your project
+        form#feedback-form
+          .user-info
+            input(name="name" type="text" placeholder="What is your name?")
+            input(name="email" type="email" placeholder="Your email")
+            input(name="tel" type="tel" placeholder="Your phone number")
+          textarea(name="", cols="30", rows="10" placeholder="Tell us about your project")
+          .additional-info
+            .project-info-item.project-timeline-block
+              .title Project timeline
+              //- input(type="range" min="1" max="14" value="25" class="proj-timeline")
+              input(type="text" class="proj-timeline")
+            .project-info-item.project-budget-block
+              .title Budget
+              //- input(type="range" class="budget-range")
+              input(type="text" class="budget-range")
+          .policy-privacy
+            label(for="privacy-policy-cb")
+              input(id="privacy-policy-cb" type="checkbox")
+              span
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error eaque inventore enim maxime aspernatur aut velit voluptatum similique porro.       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error eaque inventore enim maxime aspernatur aut velit voluptatum similique porro.       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error eaque inventore enim maxime aspernatur aut velit voluptatum similique porro.
+          button.submit-btn(type="submit") Send
+
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js")
+

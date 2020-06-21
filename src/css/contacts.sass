@@ -1,0 +1,418 @@
+.contacts-page
+  // main
+    
+  h1
+    // margin-right: 40px
+
+    color: #ffe3b7
+    font-size: 48px
+    letter-spacing: 2px
+    text-transform: uppercase
+
+    // width: 30%
+
+
+
+
+  .reverse-title-container
+    position: absolute
+    height: 100%
+    width: 100%
+    left: 0px
+    top: 0px
+
+    overflow: hidden
+
+    z-index: 10
+  .reverse-title
+    position: absolute
+    margin-left: 80px
+    // left: 4px
+    left: 10%
+    bottom: 30%
+
+    color: #fff
+
+    transform: rotate(-90deg)
+    transform-origin: 0px 0px 0px
+    &::after
+      position: absolute
+      content: ''
+      left: calc(-500% - 20px)
+      top: 50%
+
+      height: 2px
+      width: 500%
+
+      background-color: #ffe3b7
+
+
+
+
+
+  .main-section
+    position: relative
+    display: flex
+    min-height: 85vh
+    height: auto
+
+    // height: clamp(85vh, 85vh, 100vh)
+    // height: max(max-content, 85vh)
+    // height: 85vh
+
+    flex-flow: column
+    justify-content: space-around
+    padding: 216px 80px 80px
+
+    background-color: #27282c
+    
+    .content
+      display: flex
+      height: 100%
+      width: 70vw
+      margin: 0px auto
+
+      flex-flow: column
+      justify-content: space-evenly
+
+    .title-row
+      display: flex
+
+      padding-bottom: 40px
+      align-items: baseline
+      justify-content: flex-start
+
+      .subtitle
+        position: relative
+        width: 70%
+        margin-left: auto
+
+        color: #fff
+        letter-spacing: 2px
+        font-size: 24px
+    
+        z-index: 10
+
+    .contacts-row
+      display: flex
+      position: relative
+      
+      z-index: 100
+      .title
+        width: 30%
+
+        color: #fff
+        font-size: 32px
+        letter-spacing: 1px
+      
+    .contacts-block
+      width: 70%
+      margin-left: auto
+
+    .branches-block
+      display: flex
+      margin-bottom: 60px
+
+      justify-content: space-between
+      letter-spacing: 1px
+      .branch
+        color: #fff
+        &:not(:last-child)
+          margin-right: 120px
+        &__title
+          display: flex
+          min-height: 80px
+          margin-bottom: 20px
+
+          align-items: flex-end
+          padding-left: 56px
+
+          font-size: 28px
+          letter-spacing: 1px
+
+          background-repeat: no-repeat
+          background-position: left bottom
+        // &__emails
+        //   display: flex
+        //   flex-flow: column
+        //   a
+        //     display: block
+        //     margin-bottom: 20px
+
+        //     color: #ffe3b7
+        //     font-size: 24px
+        //     letter-spacing: 2px
+
+        //     @media (hover)
+        //       &:hover
+        //         color: #ed0000
+        &__tel
+          a
+            color: #fff
+            font-size: 24px
+            letter-spacing: 2px
+            @media (hover)
+              &:hover
+                color: #ed0000
+        &__adress
+          margin-bottom: 20px
+
+          color: #ffe3b7
+          font-size: 24px
+          letter-spacing: 2px
+        &.branch_london
+          .branch__title
+            background-image: url(../img/big-ben-in-london.svg)
+        &.branch_st-petersburg
+          .branch__title
+            background-image: url(../img/spb.svg)
+
+    .soc-block
+      display: flex
+      margin-bottom: 60px
+      .soc-item
+        transition: all .3s
+        img
+          width: 48px
+        &:not(:last-child)
+          margin-right: 40px
+        @media (hover)
+          &:hover
+            transform: scale(1.05)
+
+    .emails-block
+      display: flex
+      flex-flow: column
+
+      color: #fff
+      font-size: 24px
+      letter-spacing: 2px
+    .email-item
+      // display: flex
+      a
+        display: inline-block
+        margin-bottom: 20px
+
+        color: #ffe3b7
+
+        @media (hover)
+          &:hover
+            color: #ed0000
+
+  .feedback-section
+    display: flex
+
+    padding: 0px 80px
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    .show-form-btn-container
+      display: flex
+      height: calc(15vh + 1px)
+      min-height: max-content
+
+      align-items: center
+      justify-content: center
+    .show-form-btn
+      position: relative
+      display: inline-block
+
+      padding: 20px 70px 20px 50px
+
+      font-size: 24px
+      letter-spacing: 2px
+      
+      background-color: #ffe3b7
+      color: #000
+
+      border: 2px solid transparent
+      border-radius: 40px
+
+      cursor: pointer
+      transition: all .3s
+      &::after
+        position: absolute
+        content: '+'
+        right: 40px
+        top: calc(50% - 12px)
+
+        transition: all .3s
+
+      @media (hover)
+        &:hover
+          border-color: #000
+          // padding: 20px 75px 20px 45px
+          // &::after
+          //   right: 35px
+      
+      &.active
+        padding: 20px 60px
+
+        background-color: #fff
+        
+        cursor: default
+        border-color: transparent
+        &::after
+          opacity: 0
+        @media (hover)
+          &:hover
+            padding: 20px 60px
+
+
+    #feedback-form
+      display: none
+      width: 100%
+
+      flex-flow: column
+      padding-top: 40px
+      input,
+      textarea
+        padding: 15px 30px
+
+        font-size: 20px
+        letter-spacing: 1px
+
+        border: 1px solid #000
+        border-radius: 30px
+        &::placeholder
+          color: #bfc1c0
+      .user-info
+        display: flex
+        margin-bottom: 40px
+
+        justify-content: space-between
+        input
+          width: 31%
+          &:not(:last-child)
+            margin-right: 10px
+      textarea
+        width: 100%
+        margin-bottom: 80px
+
+        outline: none
+      .project-info-item
+        .irs-bar
+          height: 3px
+          top: 35px
+
+          background-color: #555
+        
+        .irs-single
+          background-color: #000
+          &::before
+            border-top-color: #000
+
+        .irs-handle
+          width: 16px
+          height: 16px
+          top: 28px
+
+          border: none
+
+          background-color: #000
+
+          cursor: pointer
+
+        .irs-line
+          height: 1px
+          background-color: #999
+
+        .irs-from,
+        .irs-to
+          top: 50px
+
+          color: #bfc1c0
+          font-size: 18px
+
+          background-color: transparent
+          &::before
+            display: none
+
+      .additional-info
+        display: flex
+        margin-bottom: 100px
+
+        justify-content: space-between
+
+      .project-info-item
+        width: 40%
+        .title
+          color: #bfc1c0
+          font-size: 24px
+          letter-spacing: 1px
+        &:not(:last-child)
+          margin-right: 80px
+
+      input[type="range"]
+        width: 100%
+        
+
+      .policy-privacy
+        position: relative
+        margin-bottom: 40px
+
+        padding-left: 50px
+
+        color: #bfc1c0
+        font-size: 20px
+        letter-spacing: 1px
+        line-height: 1.8
+        label
+          cursor: pointer
+        span
+          position: absolute
+          display: inline-block
+          height: 25px
+          width: 25px
+          left: 0px
+          top: 6px
+
+          border: 1px solid #000
+          border-radius: 50%
+          &::after
+            position: absolute
+            content: ''
+            display: inline-block
+
+            height: 15px
+            width: 15px
+            left: 4px
+            top: 4px
+
+            border-radius: 50%
+
+            background-color: #000000
+
+            opacity: 0
+            transition: all .3s
+        input[type="checkbox"]
+          display: none
+          &:checked + span
+            &::after
+              opacity: 1
+
+      .submit-btn
+        position: relative
+        display: inline-block
+        margin: 0px auto 80px
+
+        padding: 20px 60px
+
+        font-size: 24px
+        letter-spacing: 2px
+        text-transform: uppercase
+
+        background-color: #ffe3b7
+
+        border: 2px solid transparent
+        border-radius: 40px
+
+        cursor: pointer
+        transition: all .3s
+        @media (hover)
+          &:hover
+            border-color: #000
+            // letter-spacing: 4px
+
+            
+

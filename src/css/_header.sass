@@ -1,0 +1,201 @@
+.header
+  display: flex
+  position: absolute
+  width: 100%
+  top: 0px
+  left: 0px
+
+  padding: 40px 80px
+  align-items: center
+  justify-content: space-between
+
+  z-index: 500
+  .logo
+    color: #fff
+
+    font-size: 56px
+
+    // animation-delay: 5s
+    animation-delay: 1s
+    animation-duration: 1.5s
+    img
+      width: 180px
+  .burger-button
+    height: 22px
+    width: 40px
+
+    // animation-delay: 6s
+    animation-delay: 1s
+    animation-duration: 1.5s
+    z-index: 2000
+    cursor: pointer
+    .burger-container
+      position: relative
+      display: flex
+      width: 100%
+      height: 100%
+
+      align-items: center
+
+      transition: all .3s
+      span,
+      &::after,
+      &::before
+        display: inline-block
+        content: ''
+        width: 100%
+        height: 4px
+
+        background-color: #fff
+
+        transition: all .3s
+      &::after
+        position: absolute
+        left: 0px
+        bottom: 0px
+      &::before
+        position: absolute
+        left: 0px
+        top: 0px
+    @media (hover)
+      &:hover
+        .burger-container
+          transform: rotate(90deg)    
+    &.active
+      .burger-container
+        span
+          width: 0px
+          margin-left: 50%
+        &::before
+          top: 9px
+          transform: rotate(45deg)
+        &::after
+          bottom: 9px
+          transform: rotate(-45deg)
+
+  .menu
+    // position: absolute
+    position: fixed
+    top: 0px
+    left: 0px
+    height: 100vh
+    width: 100%
+
+    display: none
+
+    // padding-right: 17px
+    // background-color: #000
+    .menu-list
+      position: relative
+      display: flex
+      height: 100%
+      
+      // width: calc(100% - 17px)
+      .menu-item
+        position: absolute
+        height: 100%
+        width: 0%
+
+        overflow: hidden
+        transition: all .8s
+        .link-content
+          position: relative
+          width: 100%
+          
+          overflow: hidden
+
+          left: -100%
+          opacity: 0
+
+          transition: opacity .5s ease, left .5s ease
+          span
+            position: relative
+            display: inline-block
+
+            padding-bottom: 15px
+            word-break: break-word
+
+            transition: all .3s
+            &::after
+              position: absolute
+              content: ''
+              left: 0px
+              bottom: 0px
+              height: 2px
+              width: 0%
+              background-color: #fff
+          p
+            position: absolute
+
+            font-size: 24px
+            letter-spacing: 2px
+            line-height: 1.8
+
+            transition: all .3s
+          &.show
+            left: 0%
+            opacity: 1
+          &.hide
+            left: 100%
+            opacity: 0
+        a
+          display: flex
+          height: 100%
+          width: 100%
+
+          align-items: center
+          justify-content: flex-start
+          padding: 0px 50px
+
+          color: #fff
+          font-size: 48px
+
+          user-select: none
+
+        &:nth-child(1)
+          left: 0%
+
+          background-color: #fff
+
+          a
+            color: #000
+          .link-content
+            transition-delay: 0s
+            span
+              &::after
+                background-color: #000
+        &:nth-child(2)
+          left: 33.333%
+
+          background-color: #222
+          .link-content
+            transition-delay: .2s
+        &:nth-child(3)
+          left: 66.666%
+
+          background-color: #111
+          .link-content
+            transition-delay: .4s
+        &.active
+          .link-content
+            span
+              &::after
+                width: 100%
+        
+
+        @media (hover)
+          &:hover
+            .link-content
+              span
+                // margin-bottom: 40px
+              p
+                // bottom: 0%
+    
+    &.active
+      display: block
+      .menu-item
+
+
+
+
+
