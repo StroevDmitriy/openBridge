@@ -1,15 +1,13 @@
 .about-page
   overflow-x: hidden
   .header
-    // .logo
-    //   animation-delay: 1s
     .burger-button
-      // animation-delay: 1s
       .burger-container
         span,
         &::after,
         &::before
           background-color: #000
+
       &.active
         .burger-container
           span,
@@ -96,7 +94,6 @@
 
             background-color: #ffe2b6
           &.striped
-            // animation: imgShow .3s ease-in 1.5s forwards
             img
               opacity: 1
             &::after
@@ -120,7 +117,6 @@
         display: flex
         width: 50%
 
-        // padding: 50px 140px
         padding: 160px 140px 50px
         align-items: center
         justify-content: center
@@ -141,7 +137,6 @@
 
             background-color: red
 
-            // animation: name duration timing-function delay iteration-count direction fill-mode
           &.striped
             animation: elShow .3s ease-in 1.2s forwards
             &::after
@@ -226,28 +221,7 @@
         animation: elShow .3s ease-in 1.2s forwards
         &::after
           animation: elAfterShow .7s cubic-bezier(0.165, 0.840, 0.440, 1.000) .5s, elAfterHide .7s cubic-bezier(0.835, 0.160, 0.510, 0.700) 1.2s forwards
-          
-      // @keyframes elAfterShow
-      //   from
-      //     width: 0%
-      //   to
-      //     width: 170%
 
-      // @keyframes elAfterHide
-      //   from
-      //     width: 170%
-      //     left: -30%
-      //   to
-      //     width: 0%
-      //     left: 140%
-
-      // @keyframes elShow
-      //   from
-      //     color: transparent
-      //   to
-      //     color: #000
-        
-        
     p
       margin-bottom: 80px
 
@@ -285,7 +259,7 @@
         &.active
           &::after
             content: '-'
-            // opacity: 0
+
         @media (hover)
           &:hover
             color: #ed0000
@@ -312,15 +286,12 @@
       color: #fff
       font-size: 42px
       letter-spacing: 2px
-    // .container
-    //   position: relative
     .people-list-container
       position: relative
     .people-arrow
       position: absolute
       width: 66px
       height: 2px
-      // top: calc(50% - 35px)
       bottom: -20px
       right: -30px
 
@@ -354,7 +325,6 @@
       &::-webkit-scrollbar
         display: none
       .person-card
-        // min-width: 318px
         margin-right: 70px
         .img-container
           width: 100%

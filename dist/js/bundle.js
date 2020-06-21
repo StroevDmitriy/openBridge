@@ -200,7 +200,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let itemContent = item.querySelectorAll('.link-content p')[0];
         let itemContentHeight = itemContent.clientHeight;
 
-        // if 
         if (window.matchMedia('(min-width: 992px)').matches) {
           itemTitle.style.marginBottom = itemContentHeight + 20 + 'px';
           itemContent.style.top = itemTitle.clientHeight + 20 + 'px';
@@ -211,7 +210,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let itemTitle = item.querySelectorAll('.link-content span')[0];
         let itemContent = item.querySelectorAll('.link-content p')[0];
         
-        // if
         if (window.matchMedia('(min-width: 992px)').matches) {
           itemTitle.style.marginBottom = '0px';
           itemContent.style.top = '100%';
@@ -241,42 +239,39 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
   }
-
+  
   //Window scroll interception for "People" block
   (function() {
-    body = document.getElementsByTagName('body')[0];
+    if ( document.querySelectorAll('.people-list').length != 0 ) {
+      body = document.getElementsByTagName('body')[0];
 
-    function scrollHorizontally(e) { 
+      function scrollHorizontally(e) { 
 
-      e = window.event || e;
-      let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-      this.scrollLeft -= (delta*50);
+        e = window.event || e;
+        let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        this.scrollLeft -= (delta*50);
 
-      if (elemToScroll.scrollLeft == 0 && delta < 0) {
-        elemToScroll.scrollLeft = 1
+        if (elemToScroll.scrollLeft == 0 && delta < 0) {
+          elemToScroll.scrollLeft = 1
+        }
+
+        if ( (this.scrollLeft == 0 && delta > 0 )
+          ) {
+            body.style.overflowY = "scroll";
+            window.removeEventListener("wheel",
+              scrollElemHorizontally
+            );
+            window.removeEventListener("DOMMouseScroll", 
+              scrollElemHorizontally
+            );
+            return;
+          }
       }
 
-      if ( (this.scrollLeft == 0
-          && delta > 0
-          )
-            // || (elemScrollWidth == elemRightSideAndScroll && delta < 0)
-        ) {
-          body.style.overflowY = "scroll";
-          window.removeEventListener("wheel",
-            scrollElemHorizontally
-          );
-          window.removeEventListener("DOMMouseScroll", 
-            scrollElemHorizontally
-          );
-          return;
-        }
-    }
+      function scrollElemHorizontally() {
+        scrollHorizontally.apply(elemToScroll);
+      }
 
-    function scrollElemHorizontally() {
-      scrollHorizontally.apply(elemToScroll);
-    }
-
-    if ( document.querySelectorAll('.people-list').length != 0 ) {
       let elemToScroll = document.querySelectorAll('.people-list')[0];
   
       let prevScroll = 0,
@@ -299,9 +294,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
           if (elemBottom <= 0 && elemBottom > -100) {
             
-            if (elemRightSideAndScroll >= elemWidth && down
-              // || elemToScroll.scrollLeft > 1 && !down
-              )
+            if (elemRightSideAndScroll >= elemWidth && down)
             {
               body.style.overflowY = "hidden";
   
@@ -359,15 +352,6 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         duration: 100,
       });
-
-
-      // setTimeout( () => 
-      //   {
-      //     window.scroll({
-      //       top: feedbackForm.offsetTop,
-      //       behavior: "smooth",
-      //     })
-      //   }, 500);
         
       jQuery("html, body").animate({scrollTop: jQuery(feedbackForm).offset().top+"px"}, 1000, 'swing');
 
@@ -385,7 +369,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
       jQuery(".proj-timeline").ionRangeSlider({
         type: "double",
-        // grid: true,
         hide_min_max: true,
         min: 1,
         max: 14,

@@ -15,7 +15,6 @@
 
     font-size: 56px
 
-    // animation-delay: 5s
     animation-delay: 1s
     animation-duration: 1.5s
     img
@@ -24,7 +23,6 @@
     height: 22px
     width: 40px
 
-    // animation-delay: 6s
     animation-delay: 1s
     animation-duration: 1.5s
     z-index: 2000
@@ -74,7 +72,6 @@
           transform: rotate(-45deg)
 
   .menu
-    // position: absolute
     position: fixed
     top: 0px
     left: 0px
@@ -83,14 +80,11 @@
 
     display: none
 
-    // padding-right: 17px
-    // background-color: #000
     .menu-list
       position: relative
       display: flex
       height: 100%
       
-      // width: calc(100% - 17px)
       .menu-item
         position: absolute
         height: 100%
@@ -164,38 +158,26 @@
             span
               &::after
                 background-color: #000
+
         &:nth-child(2)
           left: 33.333%
 
           background-color: #222
           .link-content
             transition-delay: .2s
+
         &:nth-child(3)
           left: 66.666%
 
           background-color: #111
           .link-content
             transition-delay: .4s
+            
         &.active
           .link-content
             span
               &::after
                 width: 100%
-        
-
-        @media (hover)
-          &:hover
-            .link-content
-              span
-                // margin-bottom: 40px
-              p
-                // bottom: 0%
     
     &.active
       display: block
-      .menu-item
-
-
-
-
-

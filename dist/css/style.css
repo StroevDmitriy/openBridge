@@ -1164,6 +1164,10 @@ body::-webkit-scrollbar {
       .about-page .about-section .section-content .desc-block {
         width: 100%;
         padding: 100px 80px 50px 80px; }
+    .about-page .about-section .container {
+      padding: 0px 60px; }
+    .about-page .about-section .reverse-title-container .reverse-title {
+      right: 0px; }
   .work-page .project-section .project-item {
     padding: 40px 40px; }
   .contacts-page h1 {
